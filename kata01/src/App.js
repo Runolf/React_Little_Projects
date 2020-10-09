@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-
+import BandList from './Components/BandList/BandList';
 class App extends React.Component{
   
   state = {
@@ -13,10 +13,9 @@ class App extends React.Component{
   render(){
     return (
       <div className="App">
-        {this.state.Bands.map(band => {
-            return <p>{band.name}</p>
-          })
-        }
+        
+          <BandList bands={this.state}/>
+        
       </div>
     );
   }
